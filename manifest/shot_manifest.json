@@ -1,0 +1,21 @@
+{
+  "_readme": "Source of truth for all shots, VO text, and timing. See CLAUDE.md and manifest/README.md for field definitions and the pipeline stages that populate/consume this file. Do not populate vo_text or prompt fields until liberty_letter_revised.md and liberty_letter_production_plan.md exist and have been read.",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24
+  },
+  "voice_id": null,
+  "beats": [
+    { "beat_id": "B01", "vo_text": "", "vo_file": "audio/vo/vo_B01.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B02", "vo_text": "", "vo_file": "audio/vo/vo_B02.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B03", "vo_text": "", "vo_file": "audio/vo/vo_B03.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B04", "vo_text": "", "vo_file": "audio/vo/vo_B04.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B05", "vo_text": "", "vo_file": "audio/vo/vo_B05.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B06", "vo_text": "", "vo_file": "audio/vo/vo_B06.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B07", "vo_text": "", "vo_file": "audio/vo/vo_B07.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B08", "vo_text": "", "vo_file": "audio/vo/vo_B08.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B09", "vo_text": "", "vo_file": "audio/vo/vo_B09.wav", "est_duration_s": null, "shots": [] },
+    { "beat_id": "B10", "vo_text": "", "vo_file": "audio/vo/vo_B10.wav", "est_duration_s": null, "shots": [] }
+  ]
+}
