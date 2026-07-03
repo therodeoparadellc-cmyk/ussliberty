@@ -21,11 +21,13 @@ Per shot (element of `beats[].shots`):
 - `treatment` — free-text note on motion (e.g. "slow push in, 4% over duration") used by stage 4 zoompan and by Runway prompts
 - `est_duration_s` — this shot's slice of the beat's runtime; set/redistributed in stage 2
 
-## Prerequisites not yet in this repo
+## Status
 
-This manifest is currently scaffolded with empty beats and no shots. Before Phase 1 (voice test) can run, the repo needs:
+- `liberty_letter_revised.md` — populated with the final letter text (2026-07-03).
+- `vo_text` per beat — populated. Beats were segmented from the letter's paragraph structure (verbatim text, no rewording); word-count-based `est_duration_s` at 150 wpm is a placeholder pending real ffprobe measurement in Stage 2.
+- `liberty_letter_production_plan.md` — still a placeholder. Until it exists, `shots` arrays stay empty and Stage 3 (visuals) cannot start.
 
-- `liberty_letter_revised.md` — the final letter script (source of all `vo_text`)
-- `liberty_letter_production_plan.md` — shot list / treatment notes (source of all `shots` entries)
+## Prerequisites still missing
 
-Once those exist, populate `vo_text` per beat and the `shots` array per beat (with `source_type`, `prompt`/`text`/`asset`, and `treatment`), then proceed to Stage 1.
+- `liberty_letter_production_plan.md` — shot list / treatment notes (source of all `shots` entries: `source_type`, `prompt`/`text`/`asset`, `treatment`)
+- Confirmed Runway Seed Audio access — the Runway MCP tool surface currently exposes only image/video generation, not speech. Per CLAUDE.md's contingency, VO generation requires `scripts/gen_vo.py` calling the Runway API audio endpoint directly with `$RUNWAY_API_KEY`, which is not set in this environment.
