@@ -1,5 +1,5 @@
 {
-  "_readme": "Source of truth for all shots, VO text, and timing. See CLAUDE.md and manifest/README.md for field definitions and the pipeline stages that populate/consume this file. est_duration_s at beat level is a 150wpm word-count estimate pending Phase 2 ffprobe measurement. shots are empty pending liberty_letter_production_plan.md.",
+  "_readme": "Source of truth for all shots, VO text, and timing. See CLAUDE.md and manifest/README.md for field definitions and the pipeline stages that populate/consume this file. est_duration_s at beat level is a 150wpm word-count estimate pending Phase 2 ffprobe measurement; shot-level est_duration_s are proportional splits of the same placeholder and will be redistributed once real VO durations are measured. Draft shot list populated 2026-07-08 per liberty_letter_production_plan.md.",
   "video": {
     "width": 1920,
     "height": 1080,
@@ -7,15 +7,274 @@
   },
   "voice_id": null,
   "beats": [
-    { "beat_id": "B01", "vo_text": "Dear Fellow Americans, This Fourth of July, as we celebrate our nation's independence and honor the sacrifices of those in uniform, we must look past the comfortable narratives and confront a stark, unresolved reality.", "vo_file": "audio/vo/vo_B01.wav", "est_duration_s": 13.6, "shots": [] },
-    { "beat_id": "B02", "vo_text": "True patriotism demands that we do not look away from uncomfortable truths, especially when the blood of American service members and innocent civilians is involved. Today, we demand accountability for the crew of the USS Liberty (AGTR-5) — and we demand a reckoning for the broader history of state violence that this tragedy exposed.", "vo_file": "audio/vo/vo_B02.wav", "est_duration_s": 21.6, "shots": [] },
-    { "beat_id": "B03", "vo_text": "On June 8, 1967, the USS Liberty — a clearly marked American naval vessel operating in international waters — was targeted in a relentless, two-hour assault by Israeli air and naval forces during the Six-Day War.", "vo_file": "audio/vo/vo_B03.wav", "est_duration_s": 14.4, "shots": [] },
-    { "beat_id": "B04", "vo_text": "There were 294 personnel aboard. Because the Liberty was a United States Navy technical research ship, she was crewed not by soldiers but predominantly by U.S. Navy sailors, alongside a small contingent of U.S. Marines and civilian intelligence personnel from the National Security Agency.", "vo_file": "audio/vo/vo_B04.wav", "est_duration_s": 17.6, "shots": [] },
-    { "beat_id": "B05", "vo_text": "Israeli fighter jets and torpedo boats battered the ship with rockets, napalm, and torpedoes. Thirty-four Americans were killed — 31 sailors, 2 Marines, and 1 NSA civilian. One hundred seventy-one more were wounded. In all, roughly seventy percent of the ship's crew was killed or injured in the two-hour attack.", "vo_file": "audio/vo/vo_B05.wav", "est_duration_s": 20.0, "shots": [] },
-    { "beat_id": "B06", "vo_text": "The crew fought with unimaginable bravery to save their ship, only to return home to a government that chose geopolitical expediency over the lives of its own men. The attack was hastily labeled a \"tragic accident\" — a narrative fiercely rejected by the survivors. The United States government orchestrated a cover-up, silencing the crew and denying their families the justice they deserved. Israel faced no meaningful consequences.", "vo_file": "audio/vo/vo_B06.wav", "est_duration_s": 26.8, "shots": [] },
-    { "beat_id": "B07", "vo_text": "The tragedy of the USS Liberty is not an isolated anomaly; it was a glaring warning. When a foreign military is permitted to slaughter American troops without consequence, impunity becomes policy. For decades, the Israeli government and its military apparatus have operated with a documented pattern of unchecked aggression and a profound lack of restraint. The same disregard for innocent life that rained down on American sailors in 1967 has been a continuous thread in the region, borne most heavily and devastatingly by Palestinian civilians subjected to decades of military occupation, disproportionate force, and systemic displacement.", "vo_file": "audio/vo/vo_B07.wav", "est_duration_s": 38.4, "shots": [] },
-    { "beat_id": "B08", "vo_text": "A history of violence, when met with silence and unconditional financial and military backing, only breeds further tragedy. We cannot claim to stand for liberty and justice while simultaneously writing blank checks to a state that demonstrates no resolve to protect the innocent, whether they are navigating the Mediterranean under an American flag or struggling to survive in Gaza and the West Bank.", "vo_file": "audio/vo/vo_B08.wav", "est_duration_s": 25.2, "shots": [] },
-    { "beat_id": "B09", "vo_text": "Awareness is no longer enough; it is time for action. This Independence Day, we must demand an end to the impunity. We must demand that our elected officials launch a full, unredacted congressional investigation into the attack on the USS Liberty. Furthermore, we must demand that all U.S. military aid and diplomatic support be strictly conditioned on absolute accountability, adherence to international law, and the preservation of human life.", "vo_file": "audio/vo/vo_B09.wav", "est_duration_s": 27.6, "shots": [] },
-    { "beat_id": "B10", "vo_text": "Let us honor the 34 men who perished on the USS Liberty not just with empty words, but with the courage to demand the truth and the resolve to hold the perpetrators accountable. In pursuit of truth, justice, and accountability, Michael Shaddox, United States Citizen, July 4th, 2026.", "vo_file": "audio/vo/vo_B10.wav", "est_duration_s": 19.2, "shots": [] }
+    {
+      "beat_id": "B01",
+      "vo_text": "Dear Fellow Americans, This Fourth of July, as we celebrate our nation's independence and honor the sacrifices of those in uniform, we must look past the comfortable narratives and confront a stark, unresolved reality.",
+      "vo_file": "audio/vo/vo_B01.wav",
+      "est_duration_s": 13.6,
+      "shots": [
+        {
+          "shot_id": "B01A",
+          "source_type": "generated",
+          "prompt": "Wide cinematic shot of a single American flag on a tall pole, waving slowly against an overcast grey-white sky. Muted desaturated color, no sun visible, contemplative and solemn rather than triumphant. Slow, steady shot, minimal camera movement.",
+          "treatment": "static hold, 4% slow push in over duration",
+          "est_duration_s": 7.0
+        },
+        {
+          "shot_id": "B01B",
+          "source_type": "generated",
+          "prompt": "Empty small-town American Main Street at dawn, red-white-blue bunting hanging quietly along storefronts, nobody in frame, soft flat morning light, slight fog. Slow forward dolly down the center of the empty street.",
+          "treatment": "slow dolly forward, constant speed",
+          "est_duration_s": 6.6
+        }
+      ]
+    },
+    {
+      "beat_id": "B02",
+      "vo_text": "True patriotism demands that we do not look away from uncomfortable truths, especially when the blood of American service members and innocent civilians is involved. Today, we demand accountability for the crew of the USS Liberty (AGTR-5) \u2014 and we demand a reckoning for the broader history of state violence that this tragedy exposed.",
+      "vo_file": "audio/vo/vo_B02.wav",
+      "est_duration_s": 21.6,
+      "shots": [
+        {
+          "shot_id": "B02A",
+          "source_type": "text_card",
+          "text": "USS LIBERTY (AGTR-5)",
+          "treatment": "white type on black, centered, fade in/out",
+          "est_duration_s": 5.0
+        },
+        {
+          "shot_id": "B02B",
+          "source_type": "generated",
+          "prompt": "Calm open ocean under overcast sky, no vessels or land in frame, subtle swell, muted grey-blue color palette, slow drone shot pushing forward low over the water surface. Empty, isolated, quiet.",
+          "treatment": "slow forward push, low altitude",
+          "est_duration_s": 8.0
+        },
+        {
+          "shot_id": "B02C",
+          "source_type": "archival",
+          "asset": "uss_liberty_at_sea.jpg",
+          "treatment": "slow push in, 6% over duration; source from NARA/US Navy public-domain photo of USS Liberty (AGTR-5) underway, pre-attack, American flag visible",
+          "est_duration_s": 8.6
+        }
+      ]
+    },
+    {
+      "beat_id": "B03",
+      "vo_text": "On June 8, 1967, the USS Liberty \u2014 a clearly marked American naval vessel operating in international waters \u2014 was targeted in a relentless, two-hour assault by Israeli air and naval forces during the Six-Day War.",
+      "vo_file": "audio/vo/vo_B03.wav",
+      "est_duration_s": 14.4,
+      "shots": [
+        {
+          "shot_id": "B03A",
+          "source_type": "text_card",
+          "text": "JUNE 8, 1967",
+          "treatment": "white type on black, centered, fade in/out",
+          "est_duration_s": 5.0
+        },
+        {
+          "shot_id": "B03B",
+          "source_type": "archival",
+          "asset": "uss_liberty_flag_closeup.jpg",
+          "treatment": "slow push in, 5% over duration; source from NARA/US Navy public-domain photo showing USS Liberty's American flag/hull markings clearly visible",
+          "est_duration_s": 9.4
+        }
+      ]
+    },
+    {
+      "beat_id": "B04",
+      "vo_text": "There were 294 personnel aboard. Because the Liberty was a United States Navy technical research ship, she was crewed not by soldiers but predominantly by U.S. Navy sailors, alongside a small contingent of U.S. Marines and civilian intelligence personnel from the National Security Agency.",
+      "vo_file": "audio/vo/vo_B04.wav",
+      "est_duration_s": 17.6,
+      "shots": [
+        {
+          "shot_id": "B04A",
+          "source_type": "text_card",
+          "text": "294 PERSONNEL ABOARD",
+          "treatment": "white type on black, centered, fade in/out",
+          "est_duration_s": 6.0
+        },
+        {
+          "shot_id": "B04B",
+          "source_type": "archival",
+          "asset": "uss_liberty_crew.jpg",
+          "treatment": "slow push in, 5% over duration; source from NARA/US Navy public-domain crew or dockside photo, respectful, non-graphic",
+          "est_duration_s": 11.6
+        }
+      ]
+    },
+    {
+      "beat_id": "B05",
+      "vo_text": "Israeli fighter jets and torpedo boats battered the ship with rockets, napalm, and torpedoes. Thirty-four Americans were killed \u2014 31 sailors, 2 Marines, and 1 NSA civilian. One hundred seventy-one more were wounded. In all, roughly seventy percent of the ship's crew was killed or injured in the two-hour attack.",
+      "vo_file": "audio/vo/vo_B05.wav",
+      "est_duration_s": 20.0,
+      "shots": [
+        {
+          "shot_id": "B05A",
+          "source_type": "text_card",
+          "text": "34 KILLED\n31 SAILORS \u00b7 2 MARINES \u00b7 1 NSA CIVILIAN\n171 WOUNDED",
+          "treatment": "white type on black, centered, fade in/out, hold longer for readability",
+          "est_duration_s": 10.0
+        },
+        {
+          "shot_id": "B05B",
+          "source_type": "generated",
+          "prompt": "An American flag at half-mast against a flat grey overcast sky, very slow motion, solemn and still, no other elements in frame. Memorial mood, no depiction of any vessel, conflict, or people.",
+          "treatment": "static hold, minimal movement",
+          "est_duration_s": 10.0
+        }
+      ]
+    },
+    {
+      "beat_id": "B06",
+      "vo_text": "The crew fought with unimaginable bravery to save their ship, only to return home to a government that chose geopolitical expediency over the lives of its own men. The attack was hastily labeled a \"tragic accident\" \u2014 a narrative fiercely rejected by the survivors. The United States government orchestrated a cover-up, silencing the crew and denying their families the justice they deserved. Israel faced no meaningful consequences.",
+      "vo_file": "audio/vo/vo_B06.wav",
+      "est_duration_s": 26.8,
+      "shots": [
+        {
+          "shot_id": "B06A",
+          "source_type": "generated",
+          "prompt": "Close, shallow-depth-of-field shot of sunlight moving slowly across engraved names on a weathered stone memorial wall, no readable specific names, generic granite texture, contemplative and quiet.",
+          "treatment": "slow lateral pan across surface",
+          "est_duration_s": 9.0
+        },
+        {
+          "shot_id": "B06B",
+          "source_type": "text_card",
+          "text": "\u201cA TRAGIC ACCIDENT\u201d\nA COVER-UP, NOT AN ACCIDENT",
+          "treatment": "white type on black, centered, fade in/out",
+          "est_duration_s": 8.0
+        },
+        {
+          "shot_id": "B06C",
+          "source_type": "generated",
+          "prompt": "Wide distant exterior shot of a generic neoclassical federal government building in Washington D.C. style, overcast sky, no people or flags identifiable as a specific real building, symbolic of institutional silence.",
+          "treatment": "slow push in, 4% over duration",
+          "est_duration_s": 9.8
+        }
+      ]
+    },
+    {
+      "beat_id": "B07",
+      "vo_text": "The tragedy of the USS Liberty is not an isolated anomaly; it was a glaring warning. When a foreign military is permitted to slaughter American troops without consequence, impunity becomes policy. For decades, the Israeli government and its military apparatus have operated with a documented pattern of unchecked aggression and a profound lack of restraint. The same disregard for innocent life that rained down on American sailors in 1967 has been a continuous thread in the region, borne most heavily and devastatingly by Palestinian civilians subjected to decades of military occupation, disproportionate force, and systemic displacement.",
+      "vo_file": "audio/vo/vo_B07.wav",
+      "est_duration_s": 38.4,
+      "shots": [
+        {
+          "shot_id": "B07A",
+          "source_type": "generated",
+          "prompt": "Abstract symbolic image: old bronze scales of justice, slightly tarnished, sitting motionless in soft directional light against a plain dark background. No text, no figures.",
+          "treatment": "slow push in, 4% over duration",
+          "est_duration_s": 10.0
+        },
+        {
+          "shot_id": "B07B",
+          "source_type": "generated",
+          "prompt": "Silhouette of a plain barbed-wire fence line against a muted sunset sky, no people, no identifiable flags, borders, or location markers, purely symbolic and abstract composition.",
+          "treatment": "slow lateral pan, low horizon",
+          "est_duration_s": 9.0
+        },
+        {
+          "shot_id": "B07C",
+          "source_type": "generated",
+          "prompt": "Empty arid landscape at dusk, rolling bare hills, no people, no structures, no identifiable geographic or national markers, wide symbolic composition suggesting displacement and continuity.",
+          "treatment": "slow pan right to left",
+          "est_duration_s": 9.4
+        },
+        {
+          "shot_id": "B07D",
+          "source_type": "generated",
+          "prompt": "Extreme close-up of a single candle flame burning steadily against a black background, soft flicker, no other elements, memorial and continuity mood.",
+          "treatment": "static hold, subtle flicker only",
+          "est_duration_s": 10.0
+        }
+      ]
+    },
+    {
+      "beat_id": "B08",
+      "vo_text": "A history of violence, when met with silence and unconditional financial and military backing, only breeds further tragedy. We cannot claim to stand for liberty and justice while simultaneously writing blank checks to a state that demonstrates no resolve to protect the innocent, whether they are navigating the Mediterranean under an American flag or struggling to survive in Gaza and the West Bank.",
+      "vo_file": "audio/vo/vo_B08.wav",
+      "est_duration_s": 25.2,
+      "shots": [
+        {
+          "shot_id": "B08A",
+          "source_type": "generated",
+          "prompt": "Abstract close-up of a stack of American currency bound with a plain paper band, softly lit, shallow depth of field, no text or numbers readable, symbolic of unconditional financial backing.",
+          "treatment": "slow push in",
+          "est_duration_s": 8.0
+        },
+        {
+          "shot_id": "B08B",
+          "source_type": "text_card",
+          "text": "UNCONDITIONAL AID.\nNO ACCOUNTABILITY.",
+          "treatment": "white type on black, centered, fade in/out",
+          "est_duration_s": 7.0
+        },
+        {
+          "shot_id": "B08C",
+          "source_type": "generated",
+          "prompt": "Open Mediterranean-style sea at dusk, calm water reflecting a faint American flag silhouette rippling on the surface, no vessels or people, quiet and symbolic.",
+          "treatment": "static hold, slow water motion only",
+          "est_duration_s": 10.2
+        }
+      ]
+    },
+    {
+      "beat_id": "B09",
+      "vo_text": "Awareness is no longer enough; it is time for action. This Independence Day, we must demand an end to the impunity. We must demand that our elected officials launch a full, unredacted congressional investigation into the attack on the USS Liberty. Furthermore, we must demand that all U.S. military aid and diplomatic support be strictly conditioned on absolute accountability, adherence to international law, and the preservation of human life.",
+      "vo_file": "audio/vo/vo_B09.wav",
+      "est_duration_s": 27.6,
+      "shots": [
+        {
+          "shot_id": "B09A",
+          "source_type": "generated",
+          "prompt": "Wide exterior shot of a generic U.S. Capitol-style domed government building under a dramatic, heavy sky, no people visible, symbolic of pending congressional action.",
+          "treatment": "slow push in, 4% over duration",
+          "est_duration_s": 9.0
+        },
+        {
+          "shot_id": "B09B",
+          "source_type": "text_card",
+          "text": "DEMAND:\nA FULL, UNREDACTED\nCONGRESSIONAL INVESTIGATION",
+          "treatment": "white type on black, centered, fade in/out, hold longer for readability",
+          "est_duration_s": 9.6
+        },
+        {
+          "shot_id": "B09C",
+          "source_type": "generated",
+          "prompt": "Close-up of a hand writing with a pen on plain paper on a wooden desk, only hand and forearm visible, no identifiable face, warm desk-lamp lighting, symbolic of formal written demand.",
+          "treatment": "static hold, natural hand motion only",
+          "est_duration_s": 9.0
+        }
+      ]
+    },
+    {
+      "beat_id": "B10",
+      "vo_text": "Let us honor the 34 men who perished on the USS Liberty not just with empty words, but with the courage to demand the truth and the resolve to hold the perpetrators accountable. In pursuit of truth, justice, and accountability, Michael Shaddox, United States Citizen, July 4th, 2026.",
+      "vo_file": "audio/vo/vo_B10.wav",
+      "est_duration_s": 19.2,
+      "shots": [
+        {
+          "shot_id": "B10A",
+          "source_type": "generated",
+          "prompt": "An American flag being ceremonially folded by two pairs of hands only (no faces visible), soft warm light, slow and respectful motion, solemn memorial tone.",
+          "treatment": "static hold, slow natural motion",
+          "est_duration_s": 8.0
+        },
+        {
+          "shot_id": "B10B",
+          "source_type": "text_card",
+          "text": "IN PURSUIT OF TRUTH,\nJUSTICE, AND ACCOUNTABILITY",
+          "treatment": "white type on black, centered, fade in/out",
+          "est_duration_s": 6.2
+        },
+        {
+          "shot_id": "B10C",
+          "source_type": "text_card",
+          "text": "MICHAEL SHADDOX\nUNITED STATES CITIZEN\nJULY 4, 2026",
+          "treatment": "white type on black, centered, hold, slow fade to black",
+          "est_duration_s": 5.0
+        }
+      ]
+    }
   ]
 }
